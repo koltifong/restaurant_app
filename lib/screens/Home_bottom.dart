@@ -10,6 +10,7 @@ class HomeBottom extends StatelessWidget {
     backgroundColor: Color.fromRGBO(245, 245, 245, 0.5),
     body: SafeArea(
       child: Container(
+        
         padding: EdgeInsets.all(12),
           child: Column(
             children: [
@@ -24,8 +25,8 @@ class HomeBottom extends StatelessWidget {
                     child: Container(
                     padding: EdgeInsets.all(12),
                     alignment: Alignment.topLeft,
-                    height: 150,
-                    width: 350,
+                    height: 125,
+                    width: 250,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: Colors.white),
                       child: Column(
                         children: [
@@ -40,7 +41,7 @@ class HomeBottom extends StatelessWidget {
               Align(
                 alignment: 
                 Alignment.topLeft, 
-               child: Text('Food'),),
+               child: Text('Menu'),),
               Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
