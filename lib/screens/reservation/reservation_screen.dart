@@ -6,12 +6,14 @@ class ReservationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-      bottomOpacity: 0.0,
-      elevation: 0.0,
-      title: Text('Reservation', 
-      style: TextStyle(fontSize: 16),),
-      centerTitle: false,
+      appBar: AppBar(
+        bottomOpacity: 0.0,
+        elevation: 0.0,
+        title: const Text(
+          'My Reservation',
+          style: TextStyle(fontSize: 18),
+        ),
+        centerTitle: false,
       ),
     );
   }

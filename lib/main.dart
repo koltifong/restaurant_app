@@ -12,11 +12,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Restaurant',
+      title: 'Restaurant reservation',
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: Home(),
+      home: const Home(),
     );
   }
 }

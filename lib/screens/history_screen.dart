@@ -1,11 +1,11 @@
 import "package:flutter/material.dart";
 
 class HistoryScreen extends StatelessWidget {
-  const HistoryScreen ({super.key});
-  
+  const HistoryScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color.fromRGBO(245, 245, 245, 0.9),
       body: Center(
         child: Text('History'),

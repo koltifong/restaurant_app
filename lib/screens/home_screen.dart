@@ -7,19 +7,21 @@ import 'package:restaurant/screens/order_screen.dart';
 import 'package:restaurant/screens/search_screen.dart';
 
 class Home extends StatefulWidget {
-  const Home ({super.key});
-  
+  const Home({super.key});
+
   @override
-  _HomeState createState () => _HomeState();
+  // ignore: library_private_types_in_public_api
+  _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-int _Index = 0;
+// ignore: non_constant_identifier_names
+  int _Index = 0;
 
-final screens = [
-    HomeBottom(),
-    OrderScreen(),
-    HistoryScreen(),
+  final screens = [
+    const HomeBottom(),
+    const OrderScreen(),
+    const HistoryScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,89 +36,100 @@ final screens = [
       appBar: AppBar(
         bottomOpacity: 0.0,
         elevation: 0.0,
-        title: Text('Restaurant'),
+        title: const Text('Restaurant Reservation'),
         centerTitle: true,
         actions: [
           IconButton(
-          onPressed: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => const SearchScreen())),
-          icon: const Icon(Icons.search)),
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const SearchScreen())),
+              icon: const Icon(Icons.search)),
           IconButton(
-          onPressed: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (_) => const NotificationScreen())),
-          icon: const Icon(Icons.notifications)),
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const NotificationScreen())),
+              icon: const Icon(Icons.notifications)),
         ],
       ),
-      backgroundColor: Color.fromRGBO(245, 245, 245, 0.9),
-      body: screens [_Index],
+      backgroundColor: const Color.fromRGBO(245, 245, 245, 0.9),
+      body: screens[_Index],
       drawer: Drawer(
         child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.brown,
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.brown,
+              ),
+              child: Text(
+                'Welcome',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
-            child: 
-            Text('Restaurant'),
-          ),
-          ListTile(
-            leading: Icon(Icons.account_circle_outlined,color: Colors.black,),
-            title: const Text('Account',
-            style: TextStyle(fontSize: 14),
+            ListTile(
+              leading: const Icon(
+                Icons.account_circle_outlined,
+                color: Colors.black,
+              ),
+              title: const Text(
+                'Account',
+                style: TextStyle(fontSize: 14),
+              ),
+              onTap: () {},
             ),
-            onTap: () {
-              
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.history,color: Colors.black),
-            title: const Text('History',
-            style: TextStyle(fontSize: 14),
+            ListTile(
+              leading: const Icon(
+                Icons.shopping_cart_outlined,
+                color: Colors.black,
+              ),
+              title: const Text(
+                'Order',
+                style: TextStyle(fontSize: 14),
+              ),
+              onTap: () {},
             ),
-            onTap: () {
-            //   Navigator.push(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => const MyAccount()),
-            // );
-            },
-          ),
-          Spacer(),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.settings,color: Colors.black),
-            title: const Text('Settings',
-            style: TextStyle(fontSize: 14),
+            ListTile(
+              leading: const Icon(Icons.history, color: Colors.black),
+              title: const Text(
+                'History',
+                style: TextStyle(fontSize: 14),
+              ),
+              onTap: () {
+                //   Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const MyAccount()),
+                // );
+              },
             ),
-            onTap: () {
-            //   Navigator.push(
-            //   context,
-            //   MaterialPageRoute(builder: (context) => const MyAccount()),
-            // );
-            },
-          ),
-        ],
+            const Spacer(),
+            const Divider(
+              color: Colors.grey,
+            ),
+            ListTile(
+              leading: const Icon(Icons.login_outlined, color: Colors.black),
+              title: const Text(
+                'Login',
+                style: TextStyle(fontSize: 14),
+              ),
+              onTap: () {},
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        items: const <BottomNavigationBarItem> [
-        BottomNavigationBarItem(
-            activeIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
-            label: 'Home'
-        ),
-         BottomNavigationBarItem(
-            activeIcon: Icon(Icons.shopping_cart),
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Order'
-        ),
-        BottomNavigationBarItem(
-            activeIcon: Icon(Icons.history),
-            icon: Icon(Icons.history_outlined),
-            label: 'History'
-        ),
-      ],
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              activeIcon: Icon(Icons.home),
+              icon: Icon(Icons.home_outlined),
+              label: 'Home'),
+          BottomNavigationBarItem(
+              activeIcon: Icon(Icons.shopping_cart),
+              icon: Icon(Icons.shopping_cart_outlined),
+              label: 'Order'),
+          BottomNavigationBarItem(
+              activeIcon: Icon(Icons.history),
+              icon: Icon(Icons.history_outlined),
+              label: 'History'),
+        ],
         currentIndex: _Index,
         selectedItemColor: Colors.brown,
         onTap: _onItemTapped,
