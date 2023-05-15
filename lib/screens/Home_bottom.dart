@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import 'package:restaurant/screens/menu/beverages_screen.dart';
 import 'package:restaurant/screens/menu/foods_screen.dart';
 import 'package:restaurant/screens/menu/halls_screen.dart';
-import 'package:restaurant/screens/reservation/reservation_screen.dart';
+import 'package:restaurant/screens/reservation/booking_screen.dart';
 
 class HomeBottom extends StatelessWidget {
   const HomeBottom({super.key});
@@ -41,7 +41,7 @@ class HomeBottom extends StatelessWidget {
                       child: Column(
                         children: const [
                           Text(
-                            'My Reservation',
+                            'Booking',
                             style: TextStyle(fontSize: 16),
                           ),
                         ],

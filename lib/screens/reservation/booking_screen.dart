@@ -10,10 +10,10 @@ class ReservationScreen extends StatelessWidget {
         bottomOpacity: 0.0,
         elevation: 0.0,
         title: const Text(
-          'My Reservation',
+          'Booking',
           style: TextStyle(fontSize: 18),
         ),
-        centerTitle: false,
+        centerTitle: true,
       ),
     );
   }

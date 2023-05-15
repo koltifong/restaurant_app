@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfire_ui/auth.dart';
 
 import 'package:restaurant/screens/Home_bottom.dart';
 import 'package:restaurant/screens/history_screen.dart';
@@ -66,14 +67,20 @@ class _HomeState extends State<Home> {
             ),
             ListTile(
               leading: const Icon(
-                Icons.account_circle_outlined,
+                Icons.person_outlined,
                 color: Colors.black,
               ),
               title: const Text(
-                'Account',
+                'Profile',
                 style: TextStyle(fontSize: 14),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileScreen()),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(
@@ -84,7 +91,12 @@ class _HomeState extends State<Home> {
                 'Order',
                 style: TextStyle(fontSize: 14),
               ),
-              onTap: () {},
+              onTap: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const ErrorScreen()),
+                // );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.history, color: Colors.black),
@@ -92,24 +104,23 @@ class _HomeState extends State<Home> {
                 'History',
                 style: TextStyle(fontSize: 14),
               ),
-              onTap: () {
-                //   Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => const MyAccount()),
-                // );
-              },
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.info_outline, color: Colors.black),
+              title: const Text(
+                'About us',
+                style: TextStyle(fontSize: 14),
+              ),
+              onTap: () {},
             ),
             const Spacer(),
             const Divider(
               color: Colors.grey,
             ),
-            ListTile(
-              leading: const Icon(Icons.login_outlined, color: Colors.black),
-              title: const Text(
-                'Login',
-                style: TextStyle(fontSize: 14),
-              ),
-              onTap: () {},
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const SignOutButton(),
             ),
           ],
         ),
