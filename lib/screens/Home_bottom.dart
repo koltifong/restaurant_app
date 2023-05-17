@@ -26,7 +26,7 @@ class HomeBottom extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ReservationScreen(),
+                          builder: (context) => ReservationScreen(),
                         ),
                       );
                     },

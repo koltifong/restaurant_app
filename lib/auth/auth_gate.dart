@@ -17,15 +17,15 @@ class AuthGate extends StatelessWidget {
             providerConfigs: const [
               EmailProviderConfiguration(),
             ],
-            // headerBuilder: (context, constraints, shrinkOffset) {
-            //   return Padding(
-            //     padding: const EdgeInsets.all(20),
-            //     child: AspectRatio(
-            //       aspectRatio: 1,
-            //       // child: Image.asset('flutterfire_300x.png'),
-            //     ),
-            //   );
-            // },
+            headerBuilder: (context, constraints, shrinkOffset) {
+              return const Padding(
+                padding: const EdgeInsets.all(20),
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Text('Welcome'),
+                ),
+              );
+            },
             subtitleBuilder: (context, action) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),

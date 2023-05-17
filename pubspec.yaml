@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutterfire_ui: ^0.4.3+20
+  http: ^0.13.6
 
 dev_dependencies:
   flutter_test:
