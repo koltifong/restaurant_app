@@ -4,7 +4,7 @@ import 'package:flutterfire_ui/auth.dart';
 import 'package:restaurant/screens/Home_bottom.dart';
 import 'package:restaurant/screens/history_screen.dart';
 import 'package:restaurant/screens/notifications_screen.dart';
-import 'package:restaurant/screens/order_screen.dart';
+import 'package:restaurant/screens/booking_screen.dart';
 import 'package:restaurant/screens/search_screen.dart';
 
 class Home extends StatefulWidget {
@@ -135,7 +135,7 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               activeIcon: Icon(Icons.shopping_cart),
               icon: Icon(Icons.shopping_cart_outlined),
-              label: 'Order'),
+              label: 'Booking'),
           BottomNavigationBarItem(
               activeIcon: Icon(Icons.history),
               icon: Icon(Icons.history_outlined),

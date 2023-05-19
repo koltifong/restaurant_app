@@ -10,7 +10,7 @@ class HallsScreen extends StatelessWidget {
         bottomOpacity: 0.0,
         elevation: 0.0,
         title: const Text(
-          'Halls',
+          'Dinner',
           style: TextStyle(fontSize: 18),
         ),
         centerTitle: false,

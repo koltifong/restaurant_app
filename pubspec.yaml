@@ -24,4 +24,4 @@ flutter:
   uses-material-design: true
 
   assets:
-      - assets/no_internet.png
+      - assets/maps.jpg
