@@ -1,7 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant/screens/home_screen.dart';
+import 'package:restaurant/auth/auth_gate.dart';
+import 'package:restaurant/firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MainApp());
 }
 
@@ -12,11 +19,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Restaurant',
+      title: 'Restaurant reservation',
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: Home(),
+      home: const AuthGate(),
     );
   }
 }
