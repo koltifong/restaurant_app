@@ -8,7 +8,7 @@ class OrderScreen extends StatelessWidget {
     return const Scaffold(
       backgroundColor: Color.fromRGBO(245, 245, 245, 0.9),
       body: Center(
-        child: Text('Order'),
+        child: Text('Booking screen'),
       ),
     );
   }

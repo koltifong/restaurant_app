@@ -10,7 +10,7 @@ class BeveragesScreen extends StatelessWidget {
         bottomOpacity: 0.0,
         elevation: 0.0,
         title: const Text(
-          'Beverages',
+          'Lunch',
           style: TextStyle(fontSize: 18),
         ),
         centerTitle: false,
