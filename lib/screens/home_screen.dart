@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:restaurant/screens/Home_bottom.dart';
 import 'package:restaurant/screens/history_screen.dart';
@@ -37,7 +38,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         bottomOpacity: 0.0,
         elevation: 0.0,
-        title: const Text('Restaurant Reservation'),
+        title: Text(AppLocalizations.of(context)!.restaurant),
         centerTitle: true,
         actions: [
           IconButton(

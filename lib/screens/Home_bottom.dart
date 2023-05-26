@@ -6,6 +6,7 @@ import 'package:restaurant/screens/menu/breakfast_screen.dart';
 import 'package:restaurant/screens/menu/dinner_screen.dart';
 import 'package:restaurant/screens/reservation/booking_screen.dart';
 import 'package:restaurant/screens/reservation/view_booking_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeBottom extends StatelessWidget {
   const HomeBottom({super.key});
@@ -40,10 +41,10 @@ class HomeBottom extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white),
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
-                            'Booking halls',
-                            style: TextStyle(fontSize: 16),
+                            AppLocalizations.of(context)!.booking_halls,
+                            style: const TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -70,10 +71,10 @@ class HomeBottom extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white),
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
-                            'View Booking',
-                            style: TextStyle(fontSize: 16),
+                            AppLocalizations.of(context)!.view_booking,
+                            style: const TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
