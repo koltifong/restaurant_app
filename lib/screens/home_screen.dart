@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:restaurant/classes/language.dart';
+import 'package:restaurant/classes/language_constants.dart';
+import 'package:restaurant/main.dart';
 
 import 'package:restaurant/screens/Home_bottom.dart';
 import 'package:restaurant/screens/history_screen.dart';
@@ -45,6 +48,36 @@ class _HomeState extends State<Home> {
               onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => const SearchScreen())),
               icon: const Icon(Icons.search)),
+          DropdownButton<Language>(
+            underline: const SizedBox(),
+            icon: const Icon(
+              Icons.language,
+              color: Colors.white,
+            ),
+            onChanged: (Language? language) async {
+              if (language != null) {
+                Locale _locale = await setLocale(language.languageCode);
+                MainApp.setLocale(context, _locale);
+              }
+            },
+            items: Language.languageList()
+                .map<DropdownMenuItem<Language>>(
+                  (e) => DropdownMenuItem<Language>(
+                    value: e,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Text(
+                          e.flag,
+                          style: const TextStyle(fontSize: 30),
+                        ),
+                        Text(e.name)
+                      ],
+                    ),
+                  ),
+                )
+                .toList(),
+          ),
           IconButton(
               onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (_) => const NotificationScreen())),
