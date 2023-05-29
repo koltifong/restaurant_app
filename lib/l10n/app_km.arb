@@ -1,5 +1,9 @@
 {
+  "home": "ទំព័រដើម",
+  "booking": "ការកក់",
+  "history": "ប្រវត្តការកក់",
   "restaurant": "ភោជនីយដ្ឋាន",
   "booking_halls": "កក់សាល",
-  "view_booking": "មើលការកក់"
+  "view_booking": "មើលការកក់",
+  "search": "ស្វែករក"
 }

@@ -1,5 +1,9 @@
 {
+  "home": "Home",
+  "booking": "Booking",
+  "history": "History",
   "restaurant": "Restaurant",
   "booking_halls": "Booking halls",
-  "view_booking": "View Booking"
+  "view_booking": "View Booking",
+  "search": "Search"
 }

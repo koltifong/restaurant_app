@@ -56,8 +56,9 @@ class _HomeState extends State<Home> {
             ),
             onChanged: (Language? language) async {
               if (language != null) {
-                Locale _locale = await setLocale(language.languageCode);
-                MainApp.setLocale(context, _locale);
+                Locale locale = await setLocale(language.languageCode);
+                // ignore: use_build_context_synchronously
+                MainApp.setLocale(context, locale);
               }
             },
             items: Language.languageList()
@@ -66,13 +67,7 @@ class _HomeState extends State<Home> {
                     value: e,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[
-                        Text(
-                          e.flag,
-                          style: const TextStyle(fontSize: 30),
-                        ),
-                        Text(e.name)
-                      ],
+                      children: <Widget>[Text(e.name)],
                     ),
                   ),
                 )
