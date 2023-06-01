@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BeveragesScreen extends StatelessWidget {
   const BeveragesScreen({Key? key}) : super(key: key);
@@ -9,9 +10,9 @@ class BeveragesScreen extends StatelessWidget {
       appBar: AppBar(
         bottomOpacity: 0.0,
         elevation: 0.0,
-        title: const Text(
-          'Lunch',
-          style: TextStyle(fontSize: 18),
+        title: Text(
+          AppLocalizations.of(context)!.dinner,
+          style: const TextStyle(fontSize: 18),
         ),
         centerTitle: false,
       ),

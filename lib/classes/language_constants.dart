@@ -28,7 +28,7 @@ Locale _locale(String languageCode) {
     case ENGLISH:
       return const Locale(ENGLISH, '');
     case KHMER:
-      return const Locale(KHMER, "");
+      return const Locale(KHMER, '');
     default:
       return const Locale(ENGLISH, '');
   }

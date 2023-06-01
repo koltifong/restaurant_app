@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 
 import 'package:restaurant/screens/home_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -18,11 +19,13 @@ class AuthGate extends StatelessWidget {
               EmailProviderConfiguration(),
             ],
             headerBuilder: (context, constraints, shrinkOffset) {
-              return const Padding(
-                padding: EdgeInsets.all(20),
+              return Padding(
+                padding: const EdgeInsets.all(20),
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: Text('Welcome'),
+                  child: Text(
+                    AppLocalizations.of(context)!.welcome,
+                  ),
                 ),
               );
             },
@@ -30,8 +33,12 @@ class AuthGate extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: action == AuthAction.signIn
-                    ? const Text('Welcome to our restaurant, please sign in!')
-                    : const Text('Welcome to our restaurant, please sign up!'),
+                    ? Text(
+                        AppLocalizations.of(context)!.welcome_signin,
+                      )
+                    : Text(
+                        AppLocalizations.of(context)!.welcome_signin,
+                      ),
               );
             },
             footerBuilder: (context, action) {
@@ -43,15 +50,6 @@ class AuthGate extends StatelessWidget {
                 ),
               );
             },
-            // sideBuilder: (context, shrinkOffset) {
-            //   return Padding(
-            //     padding: const EdgeInsets.all(20),
-            //     child: AspectRatio(
-            //       aspectRatio: 1,
-            //       // child: Image.asset('flutterfire_300x.png'),
-            //     ),
-            //   );
-            // },
           );
         }
         return const Home();

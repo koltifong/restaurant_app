@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
@@ -7,10 +8,9 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.transparent,
         bottomOpacity: 0.0,
         elevation: 0.0,
-        title: const Text('Notifications'),
+        title: Text(AppLocalizations.of(context)!.notifications),
         centerTitle: true,
         actions: [
           IconButton(
@@ -47,18 +47,18 @@ class NotificationScreen extends StatelessWidget {
                     Container(
                       margin: const EdgeInsets.only(bottom: 5.0, left: 5.0),
                       child: Column(
-                        children: const [
+                        children: [
                           Text.rich(
                             TextSpan(
                               children: [
                                 TextSpan(
-                                  text: 'Order',
-                                  style: TextStyle(
+                                  text: AppLocalizations.of(context)!.order,
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 18,
                                   ),
                                 ),
-                                TextSpan(
+                                const TextSpan(
                                     text: '\nDetails below notifications',
                                     style: TextStyle(
                                       fontSize: 14,

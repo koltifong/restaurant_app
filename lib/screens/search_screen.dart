@@ -28,15 +28,15 @@ class SearchScreen extends StatelessWidget {
                     );
                   },
                 ),
-                hintText: 'Search...',
+                hintText: AppLocalizations.of(context)!.search,
                 border: InputBorder.none),
           ),
         ),
       )),
       backgroundColor: const Color.fromRGBO(245, 245, 245, 0.9),
       body: Center(
-          // child: Text(AppLocalizations.of(context)!.search),
-          ),
+        child: Text(AppLocalizations.of(context)!.search),
+      ),
     );
   }
 }

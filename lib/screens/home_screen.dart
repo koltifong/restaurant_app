@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
         bottomOpacity: 0.0,
         elevation: 0.0,
         title: Text(AppLocalizations.of(context)!.restaurant),
-        centerTitle: true,
+        centerTitle: false,
         actions: [
           IconButton(
               onPressed: () => Navigator.of(context).push(
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                     value: e,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[Text(e.name)],
+                      children: <Widget>[Text(e.flag), Text(e.name)],
                     ),
                   ),
                 )
@@ -85,13 +85,13 @@ class _HomeState extends State<Home> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
+            DrawerHeader(
+              decoration: const BoxDecoration(
                 color: Colors.brown,
               ),
               child: Text(
-                'Welcome',
-                style: TextStyle(color: Colors.white),
+                AppLocalizations.of(context)!.welcome,
+                style: const TextStyle(color: Colors.white),
               ),
             ),
             ListTile(
@@ -99,9 +99,9 @@ class _HomeState extends State<Home> {
                 Icons.person_outlined,
                 color: Colors.black,
               ),
-              title: const Text(
-                'Profile',
-                style: TextStyle(fontSize: 14),
+              title: Text(
+                AppLocalizations.of(context)!.account,
+                style: const TextStyle(fontSize: 14),
               ),
               onTap: () {
                 Navigator.push(
@@ -116,9 +116,9 @@ class _HomeState extends State<Home> {
                 Icons.shopping_cart_outlined,
                 color: Colors.black,
               ),
-              title: const Text(
-                'Order',
-                style: TextStyle(fontSize: 14),
+              title: Text(
+                AppLocalizations.of(context)!.order,
+                style: const TextStyle(fontSize: 14),
               ),
               onTap: () {
                 // Navigator.push(
@@ -129,17 +129,17 @@ class _HomeState extends State<Home> {
             ),
             ListTile(
               leading: const Icon(Icons.history, color: Colors.black),
-              title: const Text(
-                'History',
-                style: TextStyle(fontSize: 14),
+              title: Text(
+                AppLocalizations.of(context)!.history,
+                style: const TextStyle(fontSize: 14),
               ),
               onTap: () {},
             ),
             ListTile(
               leading: const Icon(Icons.info_outline, color: Colors.black),
-              title: const Text(
-                'About us',
-                style: TextStyle(fontSize: 14),
+              title: Text(
+                AppLocalizations.of(context)!.about_us,
+                style: const TextStyle(fontSize: 14),
               ),
               onTap: () {},
             ),
@@ -156,19 +156,19 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              activeIcon: Icon(Icons.home),
-              icon: Icon(Icons.home_outlined),
-              label: 'Home'),
+              activeIcon: const Icon(Icons.home),
+              icon: const Icon(Icons.home_outlined),
+              label: AppLocalizations.of(context)!.home),
           BottomNavigationBarItem(
-              activeIcon: Icon(Icons.shopping_cart),
-              icon: Icon(Icons.shopping_cart_outlined),
-              label: 'Booking'),
+              activeIcon: const Icon(Icons.shopping_cart),
+              icon: const Icon(Icons.shopping_cart_outlined),
+              label: AppLocalizations.of(context)!.order),
           BottomNavigationBarItem(
-              activeIcon: Icon(Icons.history),
-              icon: Icon(Icons.history_outlined),
-              label: 'History'),
+              activeIcon: const Icon(Icons.history),
+              icon: const Icon(Icons.history_outlined),
+              label: AppLocalizations.of(context)!.history),
         ],
         currentIndex: _Index,
         selectedItemColor: Colors.brown,
