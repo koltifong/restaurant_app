@@ -9,7 +9,7 @@ class Language {
   static List<Language> languageList() {
     return <Language>[
       Language(1, "kh", "ភាសាខ្មែរ", "km"),
-      Language(2, "UK", "English", "en"),
+      Language(2, "us", "English", "en"),
     ];
   }
 }

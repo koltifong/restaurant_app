@@ -5,6 +5,7 @@ import 'package:restaurant/auth/auth_gate.dart';
 import 'package:restaurant/firebase/firebase_options.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

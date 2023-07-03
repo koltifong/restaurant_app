@@ -29,3 +29,5 @@ flutter:
 
   assets:
       - assets/maps.jpg
+      - assets/american_pancake.jpg
+      - assets/egg.jpg
