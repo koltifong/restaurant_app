@@ -16,5 +16,8 @@
   "account": "Account",
   "order": "Order",
   "about_us": "About us",
-  "search": "Search"
+  "search": "Search",
+  "order_now": "Order Now!",
+  "popular_now": "Popular Now",
+  "learn_more": "Learn more"
 }
