@@ -36,7 +36,7 @@ class HomeBottom extends StatelessWidget {
                       padding: const EdgeInsets.all(12),
                       alignment: Alignment.topLeft,
                       height: 125,
-                      width: 185,
+                      width: 150,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white),

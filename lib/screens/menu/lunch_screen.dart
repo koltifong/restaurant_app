@@ -68,11 +68,11 @@ class BeveragesScreen extends StatelessWidget {
                               color: Colors.amber,
                               ),
                           ),
-                          const SizedBox(height: 10,),
+                          
                           Container(
                             alignment: Alignment.center,
                             height: 40,
-                            width: 130,
+                            width: 125,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.white),
@@ -136,11 +136,11 @@ class BeveragesScreen extends StatelessWidget {
                               color: Colors.amber,
                               ),
                           ),
-                          const SizedBox(height: 10,),
+         
                           Container(
                             alignment: Alignment.center,
-                            height: 40,
-                            width: 130,
+                            height: 35,
+                            width: 125,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.white),
