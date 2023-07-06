@@ -1,0 +1,23 @@
+{
+  "welcome": "Welcome",
+  "welcome_signin": "Welcome to our restaurant!",
+  "home": "Home",
+  "booking": "Booking",
+  "history": "History",
+  "restaurant": "Restaurant",
+  "booking_halls": "Booking halls",
+  "view_booking": "View Booking",
+  "notifications": "Notifications",
+  "menu": "Menu",
+  "breakfast": "Breakfast",
+  "lunch": "Lunch",
+  "dinner": "Dinner",
+  "location": "Location",
+  "account": "Account",
+  "order": "Order",
+  "about_us": "About us",
+  "search": "Search",
+  "order_now": "Order Now!",
+  "popular_now": "Popular Now",
+  "learn_more": "Learn more"
+}

@@ -6,6 +6,7 @@ import 'package:restaurant/screens/menu/breakfast_screen.dart';
 import 'package:restaurant/screens/menu/dinner_screen.dart';
 import 'package:restaurant/screens/reservation/booking_screen.dart';
 import 'package:restaurant/screens/reservation/view_booking_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeBottom extends StatelessWidget {
   const HomeBottom({super.key});
@@ -14,7 +15,7 @@ class HomeBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(245, 245, 245, 0.5),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Column(
@@ -35,15 +36,15 @@ class HomeBottom extends StatelessWidget {
                       padding: const EdgeInsets.all(12),
                       alignment: Alignment.topLeft,
                       height: 125,
-                      width: 190,
+                      width: 150,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white),
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
-                            'Booking halls',
-                            style: TextStyle(fontSize: 16),
+                            AppLocalizations.of(context)!.booking_halls,
+                            style: const TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -65,15 +66,15 @@ class HomeBottom extends StatelessWidget {
                       padding: const EdgeInsets.all(12),
                       alignment: Alignment.topLeft,
                       height: 125,
-                      width: 190,
+                      width: 185,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white),
                       child: Column(
-                        children: const [
+                        children: [
                           Text(
-                            'View Booking',
-                            style: TextStyle(fontSize: 16),
+                            AppLocalizations.of(context)!.view_booking,
+                            style: const TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -84,16 +85,17 @@ class HomeBottom extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const Align(
+              Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Check out our Menu',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  AppLocalizations.of(context)!.menu,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(height: 10),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
                     alignment: Alignment.centerLeft,
@@ -110,20 +112,20 @@ class HomeBottom extends StatelessWidget {
                         padding: const EdgeInsets.all(12),
                         alignment: Alignment.center,
                         height: 100,
-                        width: 100,
+                        width: 110,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: Colors.white),
                         child: Column(
-                          children: const [
+                          children: [
                             Text(
-                              'Breakfast',
-                              style: TextStyle(fontSize: 14),
+                              AppLocalizations.of(context)!.breakfast,
+                              style: const TextStyle(fontSize: 14),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.breakfast_dining_outlined,
                               size: 33,
                               color: Colors.brown,
@@ -148,21 +150,21 @@ class HomeBottom extends StatelessWidget {
                         padding: const EdgeInsets.all(12),
                         alignment: Alignment.center,
                         height: 100,
-                        width: 100,
+                        width: 110,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: Colors.white,
                         ),
                         child: Column(
-                          children: const [
+                          children: [
                             Text(
-                              'Lunch',
-                              style: TextStyle(fontSize: 14),
+                              AppLocalizations.of(context)!.lunch,
+                              style: const TextStyle(fontSize: 14),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 12,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.lunch_dining_outlined,
                               size: 33,
                               color: Colors.brown,
@@ -183,29 +185,31 @@ class HomeBottom extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Container(
-                        padding: const EdgeInsets.all(12),
-                        alignment: Alignment.center,
-                        height: 100,
-                        width: 100,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Colors.white),
-                        child: Column(
-                          children: const [
-                            Text(
-                              'Dinner',
-                              style: TextStyle(fontSize: 14),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Icon(
-                              Icons.dinner_dining_outlined,
-                              size: 33,
-                              color: Colors.brown,
-                            ),
-                          ],
+                      child: SingleChildScrollView(
+                        child: Container(
+                          padding: const EdgeInsets.all(12),
+                          alignment: Alignment.center,
+                          height: 100,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.white),
+                          child: Column(
+                            children: [
+                              Text(
+                                AppLocalizations.of(context)!.dinner,
+                                style: const TextStyle(fontSize: 14),
+                              ),
+                              const SizedBox(
+                                height: 12,
+                              ),
+                              const Icon(
+                                Icons.dinner_dining_outlined,
+                                size: 33,
+                                color: Colors.brown,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -215,11 +219,12 @@ class HomeBottom extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const Align(
+              Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  'Location',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  AppLocalizations.of(context)!.location,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(
