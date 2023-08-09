@@ -46,7 +46,6 @@ class _MainAppState extends State<MainApp> {
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
       ],
       theme: ThemeData(
         primarySwatch: Colors.brown,

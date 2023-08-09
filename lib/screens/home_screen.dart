@@ -67,7 +67,10 @@ class _HomeState extends State<Home> {
                     value: e,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: <Widget>[Text(e.flag), Text(e.name)],
+                      children: <Widget>[
+                        Text(e.flag), 
+                        Text(e.name)
+                        ],
                     ),
                   ),
                 )

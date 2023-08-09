@@ -16,6 +16,62 @@ class ReservationScreen extends StatelessWidget {
         ),
         centerTitle: false,
       ),
+      body:  Container(
+        alignment: Alignment.topRight,
+        child: const SwitchExample(),
+      )
     );
   }
 }
+class SwitchExample extends StatefulWidget {
+  const SwitchExample({super.key});
+
+  @override
+  State<SwitchExample> createState() => _SwitchExampleState();
+}
+
+class _SwitchExampleState extends State<SwitchExample> {
+  bool light = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children:[
+       Text(
+            AppLocalizations.of(context)!.switch_adopative,
+            style: const TextStyle(fontSize: 16),
+            ),
+        Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(0),
+            color: Colors.white),
+            child: Row(
+              children: [
+                    Text(
+                  AppLocalizations.of(context)!.enable_and_disable_switch,
+                  style: const TextStyle(fontSize: 16),
+                  ),
+              Switch.adaptive(
+                  value: light,
+                  activeColor: Colors.green,
+                  onChanged: (bool value) {
+                    setState(() {
+                      light = value;
+                    }
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      ],
+    );
+  }
+}
+
