@@ -38,12 +38,14 @@ class _SwitchExampleState extends State<SwitchExample> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children:[
+       // Text above switch toggle 
        Text(
             AppLocalizations.of(context)!.switch_adopative,
             style: const TextStyle(fontSize: 16),
             ),
         Row(
         children: [
+          // background color for switch toggle
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
@@ -55,6 +57,7 @@ class _SwitchExampleState extends State<SwitchExample> {
                   AppLocalizations.of(context)!.enable_and_disable_switch,
                   style: const TextStyle(fontSize: 16),
                   ),
+              //switch toggle both android and ios    
               Switch.adaptive(
                   value: light,
                   activeColor: Colors.green,

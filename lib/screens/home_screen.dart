@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:restaurant/classes/language.dart';
 import 'package:restaurant/classes/language_constants.dart';
 import 'package:restaurant/main.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 import 'package:restaurant/screens/Home_bottom.dart';
 import 'package:restaurant/screens/history_screen.dart';
@@ -153,6 +154,26 @@ class _HomeState extends State<Home> {
             Container(
               padding: const EdgeInsets.all(10),
               child: const SignOutButton(),
+            ),
+            StreamBuilder<ConnectivityResult>(
+              stream: Connectivity().onConnectivityChanged,
+              builder:
+                  (BuildContext context, AsyncSnapshot<ConnectivityResult> snapshot) {
+                if (snapshot.hasError) {
+                  return const Text(
+                      "Something has gone wrong determining the connectivity state");
+                }
+
+                if (!snapshot.hasData) {
+                  return const Text("Determining the connectivity state");
+                }
+
+                if (snapshot.data == ConnectivityResult.none) {
+                  return const Text("Connectivity lost");
+                }
+
+                return const Text("OK");
+              },
             ),
           ],
         ),

@@ -7,6 +7,7 @@ import 'package:restaurant/screens/menu/dinner_screen.dart';
 import 'package:restaurant/screens/reservation/booking_screen.dart';
 import 'package:restaurant/screens/reservation/view_booking_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 class HomeBottom extends StatelessWidget {
   const HomeBottom({super.key});
@@ -85,6 +86,26 @@ class HomeBottom extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
+              StreamBuilder<ConnectivityResult>(
+              stream: Connectivity().onConnectivityChanged,
+              builder:
+                  (BuildContext context, AsyncSnapshot<ConnectivityResult> snapshot) {
+                if (snapshot.hasError) {
+                  return const Text(
+                      "Something has gone wrong determining the connectivity state");
+                }
+
+                if (!snapshot.hasData) {
+                  return const Text("Determining the connectivity state");
+                }
+
+                if (snapshot.data == ConnectivityResult.none) {
+                  return const Text("Connectivity lost");
+                }
+
+                return const Text("OK");
+              },
+            ),
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
